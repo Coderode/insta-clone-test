@@ -388,6 +388,7 @@
                         <outlet property="loginButtonLabel" destination="bsU-ck-JtS" id="koQ-gV-c7j"/>
                         <outlet property="phoneView" destination="3a3-U0-179" id="QJL-y3-4q8"/>
                         <outlet property="segmentedControl" destination="YcN-Mx-SzD" id="w4j-NX-XoO"/>
+                        <outlet property="uiStackViewPresent" destination="zLV-NY-voY" id="Aii-g4-k5U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ayr-t9-qJJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

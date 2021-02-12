@@ -81,7 +81,13 @@ class SignupViewController: UIViewController {
 
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SignupEmailPhoneController") as! SignupEmailPhoneController
         nextViewController.modalPresentationStyle = .fullScreen
-        self.present(nextViewController, animated:true, completion:nil)
+        //self.present(nextViewController, animated:true, completion:nil)
+        
+        weak var pvc = self.presentingViewController
+
+        self.dismiss(animated: false, completion: {
+            pvc?.present(nextViewController, animated: false, completion: nil)
+        })
     }
     
 

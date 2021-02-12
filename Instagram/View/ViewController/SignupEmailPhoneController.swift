@@ -11,7 +11,10 @@ class SignupEmailPhoneController: UIViewController {
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var loginButtonLabel: UIButton!
     @IBOutlet weak var loginButton: UIButton!
-
+    
+    
+    @IBOutlet weak var uiStackViewPresent: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         bottomView.addTopBorderWithColor(color: .gray, width: 1)
@@ -36,13 +39,15 @@ class SignupEmailPhoneController: UIViewController {
     
     @objc func segmentSelected(){
         if segmentedControl.selectedSegmentIndex == 0{
-            print("select 0")
+            //let index = uiStackViewPresent.arrangedSubviews.firstIndex(of: view)
+            //uiStackViewPresent.insertArrangedSubview(newView, at: index + 1)
+           // uiStackViewPresent.
         }else if segmentedControl.selectedSegmentIndex == 1{
             print("select 1")
         }
     }
     @objc func loginButtonTapped(){
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: false, completion: nil)
     }
 
 }
