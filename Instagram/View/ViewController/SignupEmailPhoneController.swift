@@ -13,41 +13,44 @@ class SignupEmailPhoneController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     
     
-    @IBOutlet weak var uiStackViewPresent: UIStackView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         bottomView.addTopBorderWithColor(color: .gray, width: 1)
         
         
         segmentedControl.addTarget(self, action: #selector(segmentSelected), for: .valueChanged)
-        
+        emailView.isHidden = true
         
         loginButtonLabel.addTarget(self, action: #selector(loginButtonTapped), for:.touchUpInside)
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for:.touchUpInside)
         
     }
-    /*
-    @objc func indexChanged(_ sender: UISegmentedControl) {
-        if segmentedControl.selectedSegmentIndex == 0 {
-            print("Select 0")
-        } else if segmentedControl.selectedSegmentIndex == 1 {
-            print("Select 1")
-        }
-    }
-    */
+    
     
     @objc func segmentSelected(){
         if segmentedControl.selectedSegmentIndex == 0{
-            //let index = uiStackViewPresent.arrangedSubviews.firstIndex(of: view)
-            //uiStackViewPresent.insertArrangedSubview(newView, at: index + 1)
-           // uiStackViewPresent.
+            phoneView.isHidden = false
+            emailView.isHidden = true
         }else if segmentedControl.selectedSegmentIndex == 1{
-            print("select 1")
+            phoneView.isHidden = true
+            emailView.isHidden = false
         }
     }
     @objc func loginButtonTapped(){
         self.dismiss(animated: false, completion: nil)
     }
 
+}
+
+
+class EmailViewController : UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
+
+class PhoneViewController : UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }

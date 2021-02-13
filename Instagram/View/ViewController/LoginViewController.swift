@@ -129,9 +129,12 @@ class LoginViewController: UIViewController ,LoginScreen {
         guard let password = passwordText.text else {return}
         //checking email and password
         if email == "sk@gmail.com" && password == "password" {
-            let homePVC = RootPageViewController()
-            homePVC.modalPresentationStyle = .fullScreen
-            self.present(homePVC, animated: true, completion:  nil)
+            
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let rootPageController = storyBoard.instantiateViewController(withIdentifier: "RootViewController") as! RootViewController
+            rootPageController.modalPresentationStyle = .fullScreen
+            self.present(rootPageController, animated: true, completion:  nil)
+            
         }else{
             //show alert on wrong user email or password
             let alertController = UIAlertController(title: "Forgot password?", message: "You can log in with your linked facebook account.", preferredStyle: UIAlertController.Style.alert)

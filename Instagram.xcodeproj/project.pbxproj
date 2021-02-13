@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7030781525D7E48C00494605 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7030781425D7E48C00494605 /* MessageViewController.swift */; };
+		7030781825D7E4A300494605 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7030781725D7E4A300494605 /* CameraViewController.swift */; };
+		7030781E25D7F1EF00494605 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7030781D25D7F1EF00494605 /* RootViewController.swift */; };
+		7030782525D83CE100494605 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7030782425D83CE100494605 /* TabBarController.swift */; };
 		7062017925CBC95700ADE9C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7062017825CBC95700ADE9C2 /* AppDelegate.swift */; };
 		7062018025CBC95700ADE9C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7062017E25CBC95700ADE9C2 /* Main.storyboard */; };
 		7062018525CBC95900ADE9C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7062018325CBC95900ADE9C2 /* LaunchScreen.storyboard */; };
-		7062019125CBD00900ADE9C2 /* RootPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7062019025CBD00900ADE9C2 /* RootPageViewController.swift */; };
 		7062019725CBFC1100ADE9C2 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7062019625CBFC1100ADE9C2 /* SignupViewController.swift */; };
 		7062019E25CC1F4E00ADE9C2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7062019D25CC1F4E00ADE9C2 /* LoginViewController.swift */; };
 		7063302125D4FEBE00BF658F /* UIButton+image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063302025D4FEBE00BF658F /* UIButton+image.swift */; };
@@ -33,13 +36,16 @@
 		0FFFBEAEC5F9D76BDCCC429F /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
 		269BE9007055CDBE79E7698E /* Pods_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F0DE0209F86105C5766F925 /* Pods-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.release.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.release.xcconfig"; sourceTree = "<group>"; };
+		7030781425D7E48C00494605 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		7030781725D7E4A300494605 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		7030781D25D7F1EF00494605 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		7030782425D83CE100494605 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		7062017525CBC95700ADE9C2 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7062017825CBC95700ADE9C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7062017F25CBC95700ADE9C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7062018425CBC95900ADE9C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7062018625CBC95900ADE9C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7062018D25CBC9DA00ADE9C2 /* Instagram.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Instagram.entitlements; sourceTree = "<group>"; };
-		7062019025CBD00900ADE9C2 /* RootPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPageViewController.swift; sourceTree = "<group>"; };
 		7062019625CBFC1100ADE9C2 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		7062019D25CC1F4E00ADE9C2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7063302025D4FEBE00BF658F /* UIButton+image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+image.swift"; sourceTree = "<group>"; };
@@ -148,10 +154,13 @@
 		F717361A25D3BDC8008A3EAE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				7062019025CBD00900ADE9C2 /* RootPageViewController.swift */,
 				7062019625CBFC1100ADE9C2 /* SignupViewController.swift */,
 				7062019D25CC1F4E00ADE9C2 /* LoginViewController.swift */,
 				707C21B525D683270010A1C0 /* SignupEmailPhoneController.swift */,
+				7030781425D7E48C00494605 /* MessageViewController.swift */,
+				7030781725D7E4A300494605 /* CameraViewController.swift */,
+				7030781D25D7F1EF00494605 /* RootViewController.swift */,
+				7030782425D83CE100494605 /* TabBarController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -312,8 +321,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F78247D125D3CA1C00B2208E /* String+Validation.swift in Sources */,
-				7062019125CBD00900ADE9C2 /* RootPageViewController.swift in Sources */,
+				7030781E25D7F1EF00494605 /* RootViewController.swift in Sources */,
 				7062017925CBC95700ADE9C2 /* AppDelegate.swift in Sources */,
+				7030782525D83CE100494605 /* TabBarController.swift in Sources */,
 				F717362925D3C119008A3EAE /* LoginScreenExternal.swift in Sources */,
 				7064486B25D4080B000C241E /* LoginDarkScreen.swift in Sources */,
 				F717362625D3C0DD008A3EAE /* LoginScreenInternal.swift in Sources */,
@@ -323,9 +333,11 @@
 				F717362325D3BF3E008A3EAE /* UITextField+Padding.swift in Sources */,
 				707FB9EC25D56C2C00BC06A8 /* PasswordTextField.swift in Sources */,
 				7064486225D3F124000C241E /* LoginLightScreen.swift in Sources */,
+				7030781525D7E48C00494605 /* MessageViewController.swift in Sources */,
 				707C21B625D683270010A1C0 /* SignupEmailPhoneController.swift in Sources */,
 				7062019E25CC1F4E00ADE9C2 /* LoginViewController.swift in Sources */,
 				7063302125D4FEBE00BF658F /* UIButton+image.swift in Sources */,
+				7030781825D7E4A300494605 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

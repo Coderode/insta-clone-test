@@ -195,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1P-7z-8Yd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1900.0000000000002" y="6.6964285714285712"/>
+            <point key="canvasLocation" x="-2691" y="6"/>
         </scene>
         <!--Signup-Email-Phone-->
         <scene sceneID="yTn-xJ-07Q">
@@ -229,56 +229,31 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M3S-KX-ygR" userLabel="FormView">
                                                 <rect key="frame" x="32" y="342" width="350" height="160"/>
                                                 <subviews>
-                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zha-08-fth" userLabel="FormScroll View">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zLV-NY-voY">
                                                         <rect key="frame" x="0.0" y="0.0" width="350" height="160"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z6k-n4-0SJ" userLabel="FormBaseView">
-                                                                <rect key="frame" x="0.0" y="0.0" width="700" height="160"/>
-                                                                <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zLV-NY-voY">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="700" height="160"/>
-                                                                        <subviews>
-                                                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3a3-U0-179" userLabel="phoneView">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="350" height="160"/>
-                                                                                <connections>
-                                                                                    <segue destination="UBj-2G-c0r" kind="embed" id="08Q-AT-Sdi"/>
-                                                                                </connections>
-                                                                            </containerView>
-                                                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wEI-kw-HPp" userLabel="emailView">
-                                                                                <rect key="frame" x="350" y="0.0" width="350" height="160"/>
-                                                                                <connections>
-                                                                                    <segue destination="lsp-No-8Rl" kind="embed" id="A0h-pY-cAe"/>
-                                                                                </connections>
-                                                                            </containerView>
-                                                                        </subviews>
-                                                                    </stackView>
-                                                                </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="bottom" secondItem="zLV-NY-voY" secondAttribute="bottom" id="Cfm-15-Zfp"/>
-                                                                    <constraint firstItem="zLV-NY-voY" firstAttribute="top" secondItem="Z6k-n4-0SJ" secondAttribute="top" id="Lxt-G1-3c6"/>
-                                                                    <constraint firstItem="zLV-NY-voY" firstAttribute="leading" secondItem="Z6k-n4-0SJ" secondAttribute="leading" id="VWW-LU-J9l"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="zLV-NY-voY" secondAttribute="trailing" id="eiH-PR-MZn"/>
-                                                                </constraints>
-                                                            </view>
+                                                            <containerView opaque="NO" contentMode="scaleToFill" restorationIdentifier="phoneView" translatesAutoresizingMaskIntoConstraints="NO" id="3a3-U0-179" userLabel="phoneView">
+                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="160"/>
+                                                                <connections>
+                                                                    <segue destination="UBj-2G-c0r" kind="embed" id="08Q-AT-Sdi"/>
+                                                                </connections>
+                                                            </containerView>
+                                                            <containerView opaque="NO" contentMode="scaleToFill" restorationIdentifier="emailView" translatesAutoresizingMaskIntoConstraints="NO" id="wEI-kw-HPp" userLabel="emailView">
+                                                                <rect key="frame" x="175" y="0.0" width="175" height="160"/>
+                                                                <connections>
+                                                                    <segue destination="lsp-No-8Rl" kind="embed" id="A0h-pY-cAe"/>
+                                                                </connections>
+                                                            </containerView>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstItem="Z6k-n4-0SJ" firstAttribute="leading" secondItem="zha-08-fth" secondAttribute="leading" id="DG5-f8-4Da"/>
-                                                            <constraint firstItem="Z6k-n4-0SJ" firstAttribute="top" secondItem="zha-08-fth" secondAttribute="top" id="L6S-cC-cGO"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Z6k-n4-0SJ" secondAttribute="trailing" id="eJj-Ze-JUE"/>
-                                                            <constraint firstAttribute="bottom" secondItem="Z6k-n4-0SJ" secondAttribute="bottom" id="wgJ-bv-GvZ"/>
-                                                        </constraints>
-                                                    </scrollView>
+                                                    </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="Z6k-n4-0SJ" firstAttribute="height" secondItem="M3S-KX-ygR" secondAttribute="height" id="3u1-RZ-fb4"/>
-                                                    <constraint firstAttribute="bottom" secondItem="zha-08-fth" secondAttribute="bottom" id="Cqp-IX-icw"/>
-                                                    <constraint firstItem="zha-08-fth" firstAttribute="top" secondItem="M3S-KX-ygR" secondAttribute="top" id="D4j-Ay-6fA"/>
-                                                    <constraint firstAttribute="trailing" secondItem="zha-08-fth" secondAttribute="trailing" id="Gry-aJ-hM9"/>
-                                                    <constraint firstItem="Z6k-n4-0SJ" firstAttribute="width" secondItem="M3S-KX-ygR" secondAttribute="width" multiplier="2" priority="900" id="Rfi-Mu-bTJ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="zLV-NY-voY" secondAttribute="bottom" id="Dm4-23-Ncx"/>
+                                                    <constraint firstAttribute="trailing" secondItem="zLV-NY-voY" secondAttribute="trailing" id="Tyz-xf-oNX"/>
+                                                    <constraint firstItem="zLV-NY-voY" firstAttribute="leading" secondItem="M3S-KX-ygR" secondAttribute="leading" id="Xqk-nl-cOw"/>
+                                                    <constraint firstItem="zLV-NY-voY" firstAttribute="top" secondItem="M3S-KX-ygR" secondAttribute="top" id="h8g-Kx-gtv"/>
                                                     <constraint firstAttribute="height" constant="160" id="qcL-8h-Ol1"/>
-                                                    <constraint firstItem="zha-08-fth" firstAttribute="leading" secondItem="M3S-KX-ygR" secondAttribute="leading" id="vMs-uJ-Wis"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wco-MP-eTJ">
@@ -388,19 +363,18 @@
                         <outlet property="loginButtonLabel" destination="bsU-ck-JtS" id="koQ-gV-c7j"/>
                         <outlet property="phoneView" destination="3a3-U0-179" id="QJL-y3-4q8"/>
                         <outlet property="segmentedControl" destination="YcN-Mx-SzD" id="w4j-NX-XoO"/>
-                        <outlet property="uiStackViewPresent" destination="zLV-NY-voY" id="Aii-g4-k5U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ayr-t9-qJJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1900.0000000000002" y="687.72321428571422"/>
+            <point key="canvasLocation" x="-2135" y="731"/>
         </scene>
         <!--SignupWithPhone-->
         <scene sceneID="S9q-dx-fbp">
             <objects>
-                <viewController id="UBj-2G-c0r" userLabel="SignupWithPhone" sceneMemberID="viewController">
+                <viewController restorationIdentifier="PhoneViewController" storyboardIdentifier="PhoneViewController" id="UBj-2G-c0r" userLabel="SignupWithPhone" customClass="PhoneViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TVw-wi-RYl">
-                        <rect key="frame" x="0.0" y="0.0" width="350" height="160"/>
+                        <rect key="frame" x="0.0" y="0.0" width="175" height="160"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="JEQ-9z-DCH"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
@@ -408,14 +382,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcn-vu-0F0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2326" y="1400"/>
+            <point key="canvasLocation" x="-2691" y="1400"/>
         </scene>
         <!--SignupWithEmail-->
         <scene sceneID="eA2-Ui-t7I">
             <objects>
-                <viewController id="lsp-No-8Rl" userLabel="SignupWithEmail" sceneMemberID="viewController">
+                <viewController restorationIdentifier="EmailViewController" storyboardIdentifier="EmailViewController" id="lsp-No-8Rl" userLabel="SignupWithEmail" customClass="EmailViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T7I-lt-4qC">
-                        <rect key="frame" x="0.0" y="0.0" width="350" height="160"/>
+                        <rect key="frame" x="0.0" y="0.0" width="175" height="160"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Qdh-JF-oA3"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -423,7 +397,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ued-m5-lbl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2326" y="1595"/>
+            <point key="canvasLocation" x="-1645" y="1400"/>
         </scene>
         <!--Login-->
         <scene sceneID="gmA-AJ-WAi">
@@ -680,22 +654,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xkY-6r-tcv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1146.376811594203" y="6.0267857142857144"/>
-        </scene>
-        <!--Root Page View Controller-->
-        <scene sceneID="zTl-lb-mrp">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="5CP-Gt-uXb" customClass="RootPageViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r75-72-Th0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-426" y="7"/>
+            <point key="canvasLocation" x="-1597" y="5"/>
         </scene>
         <!--Camera-->
         <scene sceneID="HcJ-Uw-kQo">
             <objects>
-                <viewController restorationIdentifier="CameraVC" storyboardIdentifier="CameraVC" title="Camera" id="ARD-Gp-KRO" sceneMemberID="viewController">
+                <viewController restorationIdentifier="CameraViewController" storyboardIdentifier="CameraViewController" title="Camera" id="ARD-Gp-KRO" customClass="CameraViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f51-F9-eNZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="818"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="c7s-VK-CaZ"/>
                         <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -703,14 +669,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sye-ZO-AQx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="329" y="-364"/>
+            <point key="canvasLocation" x="1586" y="-973"/>
         </scene>
         <!--Message-->
         <scene sceneID="1FR-WW-Qhv">
             <objects>
-                <viewController restorationIdentifier="MessageVC" storyboardIdentifier="MessageVC" title="Message" id="JcA-43-lfL" sceneMemberID="viewController">
+                <viewController restorationIdentifier="MessageViewController" storyboardIdentifier="MessageViewController" title="Message" id="JcA-43-lfL" customClass="MessageViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="auR-kL-4Yc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="818"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="W9A-yk-Dp6"/>
                         <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -718,22 +684,134 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adO-vU-PQj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="329" y="293"/>
+            <point key="canvasLocation" x="1586" y="999"/>
         </scene>
-        <!--Main-->
-        <scene sceneID="RWp-WA-Rnh">
+        <!--Profile-->
+        <scene sceneID="McR-Hg-rwj">
             <objects>
-                <viewController restorationIdentifier="AppVC" storyboardIdentifier="AppVC" title="Main" id="Dze-kD-lQt" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4h2-nW-hyZ">
+                <viewController id="FgD-kR-DSL" userLabel="Profile" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w7u-Ff-kcb">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="735"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pmM-Yc-4JN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="sqL-ey-zx2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XE1-yD-Zh3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2661" y="284"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="ecO-aA-adQ">
+            <objects>
+                <viewController id="fqp-B4-jFh" userLabel="Home" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ucH-Bl-bKy">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="735"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yOf-6T-X5O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="gO8-0f-p21"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FQa-8U-VoU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2662" y="-574"/>
+        </scene>
+        <!--RootViewController-->
+        <scene sceneID="tca-l0-cOz">
+            <objects>
+                <viewController restorationIdentifier="RootViewController" storyboardIdentifier="RootViewController" id="3P5-Q8-op7" userLabel="RootViewController" customClass="RootViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xcg-S2-W5a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Roq-5X-HlB"/>
-                        <color key="backgroundColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yob-KF-qV8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="96Q-xY-RBF">
+                                        <rect key="frame" x="0.0" y="0.0" width="1440" height="818"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="OTY-bJ-tTt">
+                                                <rect key="frame" x="0.0" y="0.0" width="1440" height="818"/>
+                                                <subviews>
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zDf-c3-TY9" userLabel="camera">
+                                                        <rect key="frame" x="0.0" y="0.0" width="480" height="818"/>
+                                                        <connections>
+                                                            <segue destination="ARD-Gp-KRO" kind="embed" id="hvA-pb-BJH"/>
+                                                        </connections>
+                                                    </containerView>
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NGz-G0-nie" userLabel="TabControl">
+                                                        <rect key="frame" x="480" y="0.0" width="480" height="818"/>
+                                                        <connections>
+                                                            <segue destination="THg-m0-gHt" kind="embed" id="h1g-KK-oE7"/>
+                                                        </connections>
+                                                    </containerView>
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HUS-Ya-FaZ" userLabel="message">
+                                                        <rect key="frame" x="960" y="0.0" width="480" height="818"/>
+                                                        <connections>
+                                                            <segue destination="JcA-43-lfL" kind="embed" id="8xu-Ca-dlE"/>
+                                                        </connections>
+                                                    </containerView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="OTY-bJ-tTt" firstAttribute="top" secondItem="96Q-xY-RBF" secondAttribute="top" id="I6a-jQ-Pcg"/>
+                                            <constraint firstItem="OTY-bJ-tTt" firstAttribute="leading" secondItem="96Q-xY-RBF" secondAttribute="leading" id="KmK-qQ-xDQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="OTY-bJ-tTt" secondAttribute="trailing" id="VrE-UL-6c7"/>
+                                            <constraint firstAttribute="bottom" secondItem="OTY-bJ-tTt" secondAttribute="bottom" id="aol-e7-R6s"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="96Q-xY-RBF" secondAttribute="bottom" id="0MX-Zt-lmC"/>
+                                    <constraint firstAttribute="trailing" secondItem="96Q-xY-RBF" secondAttribute="trailing" id="J8a-0p-RuB"/>
+                                    <constraint firstItem="96Q-xY-RBF" firstAttribute="top" secondItem="Yob-KF-qV8" secondAttribute="top" id="VMK-f3-887"/>
+                                    <constraint firstItem="96Q-xY-RBF" firstAttribute="leading" secondItem="Yob-KF-qV8" secondAttribute="leading" id="cWe-yT-7CE"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="agW-3l-j1w"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="agW-3l-j1w" firstAttribute="trailing" secondItem="Yob-KF-qV8" secondAttribute="trailing" id="0v7-tC-i2e"/>
+                            <constraint firstItem="Yob-KF-qV8" firstAttribute="top" secondItem="agW-3l-j1w" secondAttribute="top" id="Cs1-48-jVT"/>
+                            <constraint firstItem="Yob-KF-qV8" firstAttribute="leading" secondItem="agW-3l-j1w" secondAttribute="leading" id="QiY-b9-kge"/>
+                            <constraint firstItem="agW-3l-j1w" firstAttribute="bottom" secondItem="Yob-KF-qV8" secondAttribute="bottom" id="lex-oR-fNW"/>
+                            <constraint firstItem="96Q-xY-RBF" firstAttribute="width" secondItem="agW-3l-j1w" secondAttribute="width" multiplier="3" priority="100" id="skc-JS-e1X"/>
+                            <constraint firstItem="96Q-xY-RBF" firstAttribute="height" secondItem="agW-3l-j1w" secondAttribute="height" id="v4m-vg-Alf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="TabBarCotroller" destination="NGz-G0-nie" id="Qwt-bV-9LO"/>
+                        <outlet property="cameraView" destination="zDf-c3-TY9" id="88H-gC-PfN"/>
+                        <outlet property="messageView" destination="HUS-Ya-FaZ" id="83W-PI-qoc"/>
+                        <outlet property="stackView" destination="OTY-bJ-tTt" id="rse-N0-egM"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PJR-QP-mN6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7av-hT-ILW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1106" y="-27"/>
+            <point key="canvasLocation" x="99" y="5"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="LRs-fr-wWk">
+            <objects>
+                <tabBarController restorationIdentifier="TabBarController" storyboardIdentifier="TabBarController" id="THg-m0-gHt" customClass="TabBarController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="bF0-OO-lKO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fqp-B4-jFh" kind="relationship" relationship="viewControllers" id="C5c-l6-ZFG"/>
+                        <segue destination="FgD-kR-DSL" kind="relationship" relationship="viewControllers" id="Hfi-bt-ct0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0RE-fk-1x9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1586" y="5"/>
         </scene>
     </scenes>
     <resources>
