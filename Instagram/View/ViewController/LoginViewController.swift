@@ -93,8 +93,6 @@ class LoginViewController: UIViewController ,LoginScreen {
         
         uiController.view = self
         bottomView.addTopBorderWithColor(color: .gray, width: 1)
-        passwordText.setPadding()
-        emailText.setPadding()
         leftView.addTopBorderWithColor(color: .gray, width: 1)
         rightView.addTopBorderWithColor(color: .gray, width: 1)
         topLangButton.setImage( UIImage(named: "down_arrow"), for: .normal)

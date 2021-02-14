@@ -14,6 +14,7 @@ class InstaTextField: UITextField {
         layer.borderWidth = 1
         layer.borderColor = UIColor.gray.cgColor
         backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9803921569, blue: 0.9803921569, alpha: 1)
+        super.setPadding()
     }
     
    
