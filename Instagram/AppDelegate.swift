@@ -20,11 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let loginViewController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         loginViewController.uiController = LoginLightScreen()
         
-        
         //adding a nav bar at top for controlling pages
         //let Nav = UINavigationController.init(rootViewController: loginViewController)
         //AppDelegate.shared().window?.rootViewController = Nav
-        
         
         AppDelegate.shared().window?.rootViewController = loginViewController
         AppDelegate.shared().window?.makeKeyAndVisible()

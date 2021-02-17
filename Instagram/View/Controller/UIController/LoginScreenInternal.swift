@@ -8,11 +8,6 @@
 import Foundation
 import UIKit
 
-protocol LoginUIController: class {
-    var view: LoginScreen? { get set }
-}
-
-
 class LoginScreenInternal: NSObject , LoginUIController {
     var view: LoginScreen? = nil {
         didSet{

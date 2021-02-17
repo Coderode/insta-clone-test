@@ -19,14 +19,7 @@ class SignupViewController: UIViewController {
     
     
     @IBOutlet weak var signupPhoneEmail: UIButton!
-    /*
-    @IBOutlet weak var emailText: UITextField!
     
-    @IBOutlet weak var passwordText: UITextField!
-    
-    var users = [String: String]()
-    
-    */
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
