@@ -5,5 +5,6 @@ target 'Instagram' do
 	pod 'Firebase/Storage'
 	pod 'Firebase/Database'
   pod 'IQKeyboardManagerSwift'
+  pod 'NVActivityIndicatorView'
 
 end

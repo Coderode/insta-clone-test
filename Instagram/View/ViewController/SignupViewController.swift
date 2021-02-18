@@ -35,34 +35,7 @@ class SignupViewController: UIViewController {
         signupPhoneEmail.addTarget(self, action: #selector(signupWithPhoneEmailTapped), for: .touchUpInside)
     }
     
-    
-    /*
-    func signup(){
-        //Sign the user
-        let email : String? = emailText.text!
-        let pass : String? = passwordText.text!
-        
-        if email! == "" || pass! == "" {
-            print("Error in signup")
-        }else{
-            users[email!] = pass
-            let homePVC = RootPageViewController()
-            homePVC.modalPresentationStyle = .fullScreen
-            self.present(homePVC, animated: true, completion:  nil)
-        }
-        
-        
-    }
-    
-    func setupProfile(){
-        //TODO : crate user profile
-    }
-    @IBAction func signupButtonAction(_ sender: Any) {
-        signup()
-    }
-    */
-    
-    
+
     //taking out from the stack
     @objc func loginButtonTapped(){
         self.dismiss(animated: true, completion: nil)
@@ -71,13 +44,10 @@ class SignupViewController: UIViewController {
     
     @objc func signupWithPhoneEmailTapped(){
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SignupEmailPhoneController") as! SignupEmailPhoneController
         nextViewController.modalPresentationStyle = .fullScreen
         //self.present(nextViewController, animated:true, completion:nil)
-        
         weak var pvc = self.presentingViewController
-
         self.dismiss(animated: false, completion: {
             pvc?.present(nextViewController, animated: false, completion: nil)
         })

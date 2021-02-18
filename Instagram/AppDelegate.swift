@@ -8,6 +8,7 @@
 import UIKit
 import IQKeyboardManagerSwift
 import Firebase
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
@@ -15,20 +16,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //keyboard Manager
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        //configure firebase
+        FirebaseApp.configure()
         
-        //login
-        let loginViewController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        loginViewController.uiController = LoginLightScreen()
+        //show first page
+        if Auth.auth().currentUser != nil {
+          // User is signed in.
+            let showFirstController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "RootViewController") as! RootViewController
+            AppDelegate.shared().window?.rootViewController = showFirstController
+        } else {
+          // No user is signed in.
+          // ...
+            let showFirstController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            showFirstController.uiController = LoginLightScreen()
+            AppDelegate.shared().window?.rootViewController = showFirstController
+        }
         
         //adding a nav bar at top for controlling pages
         //let Nav = UINavigationController.init(rootViewController: loginViewController)
         //AppDelegate.shared().window?.rootViewController = Nav
         
-        AppDelegate.shared().window?.rootViewController = loginViewController
         AppDelegate.shared().window?.makeKeyAndVisible()
+
         
-        //configure firebase
-        FirebaseApp.configure()
         return true
     }
     class func shared() -> AppDelegate{

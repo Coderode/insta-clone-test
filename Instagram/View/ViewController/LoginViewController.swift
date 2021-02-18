@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+
 
 //protocol for login screen ui
 protocol LoginScreen: UIViewController {
@@ -105,9 +107,6 @@ class LoginViewController: UIViewController ,LoginScreen {
         //move to signup controller
         signupBlueButton.addTarget(self, action: #selector(signupButtonTapped), for:.touchUpInside)
         signupLabelButton.addTarget(self, action: #selector(signupButtonTapped), for:.touchUpInside)
-        
-        
-
     }
     
     /*
@@ -123,41 +122,38 @@ class LoginViewController: UIViewController ,LoginScreen {
      */
     
     @objc func userLogin(){
+        
         guard let email = emailText.text else { return }
         guard let password = passwordText.text else {return}
         //checking email and password
-        if email == "sk@gmail.com" && password == "password" {
-            
+        Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
+            if error != nil {
+                //show alert on wrong user email or password
+                let alertController = UIAlertController(title: "Error!", message: error!.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+                
+                //action for cancel button
+                let action = UIAlertAction(title: "Try Again", style: .cancel) { (action:UIAlertAction) in
+                }
+                
+                //adding actions to alert pop up
+                alertController.view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = UIColor.white
+                alertController.view.tintColor = UIColor.black
+                alertController.addAction(action)
+                self.present(alertController, animated: true, completion: nil)
+                return
+            }
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let rootPageController = storyBoard.instantiateViewController(withIdentifier: "RootViewController") as! RootViewController
-            rootPageController.modalPresentationStyle = .fullScreen
-            self.present(rootPageController, animated: true, completion:  nil)
-            
-        }else{
-            //show alert on wrong user email or password
-            let alertController = UIAlertController(title: "Forgot password?", message: "You can log in with your linked facebook account.", preferredStyle: UIAlertController.Style.alert)
-            //action for default button
-            let action1 = UIAlertAction(title: "Use Facebook", style: .default) { (action:UIAlertAction) in
-                //print("You've pressed default");
-            }
-            //action for cancel button
-            let action2 = UIAlertAction(title: "Try Again", style: .cancel) { (action:UIAlertAction) in
-                //print("You've pressed cancel");
-            }
-            
-            //adding actions to alert pop up
-            alertController.view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = UIColor.white
-            alertController.view.tintColor = UIColor.black
-            alertController.addAction(action1)
-            alertController.addAction(action2)
-            self.present(alertController, animated: true, completion: nil)
-            
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "RootViewController") as! RootViewController
+            nextViewController.modalPresentationStyle = .fullScreen
+            weak var pvc = self.presentingViewController
+            self.dismiss(animated: false, completion: {
+                pvc?.present(nextViewController, animated: false, completion: nil)
+            })
         }
     }
     
     @objc func signupButtonTapped(){
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SignupViewController") as! SignupViewController
         nextViewController.modalPresentationStyle = .fullScreen
         self.present(nextViewController, animated:true, completion:nil)
