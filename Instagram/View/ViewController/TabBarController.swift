@@ -6,14 +6,21 @@
 //
 
 import UIKit
-
+import Foundation
 class TabBarController: UITabBarController {
     
+    var activeScreen : TabBarPages!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setTabBarItems(self.tabBar)
         
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let currentVC = self.selectedViewController as? TabBarPagesVC {
+            self.activeScreen = currentVC.page
+        }
     }
     func setTabBarItems(_ tabBar : UITabBar){
         tabBar.backgroundColor = .white

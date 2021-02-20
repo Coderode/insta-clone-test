@@ -728,7 +728,7 @@
         <!--profile-->
         <scene sceneID="POY-zj-Bu0">
             <objects>
-                <viewController id="fPK-gX-3Be" userLabel="profile" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ProfileViewController" storyboardIdentifier="ProfileViewController" id="fPK-gX-3Be" userLabel="profile" customClass="ProfileViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="40L-VJ-V3d">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="735"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -736,34 +736,43 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZG-cy-EaS">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="70"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Vsp-yK-EDW">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vsp-yK-EDW">
                                         <rect key="frame" x="16" y="0.0" width="448" height="70"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sd8-CC-cxj">
-                                                <rect key="frame" x="0.0" y="0.0" width="219" height="70"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <state key="normal" title="Username">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sd8-CC-cxj">
+                                                <rect key="frame" x="0.0" y="0.0" width="269" height="70"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Username" image="down_arrow">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wco-km-bhG">
-                                                <rect key="frame" x="244" y="0.0" width="89.5" height="70"/>
-                                                <state key="normal" title="Button"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wco-km-bhG">
+                                                <rect key="frame" x="269" y="0.0" width="89.5" height="70"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="plus-outline">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gp5-O2-2Qv">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gp5-O2-2Qv">
                                                 <rect key="frame" x="358.5" y="0.0" width="89.5" height="70"/>
-                                                <state key="normal" title="Button"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="menu-bar">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                             </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="gp5-O2-2Qv" secondAttribute="trailing" id="0Wm-k5-5Qn"/>
                                             <constraint firstItem="Sd8-CC-cxj" firstAttribute="top" secondItem="Vsp-yK-EDW" secondAttribute="top" id="7Ji-mP-ZWO"/>
+                                            <constraint firstItem="Wco-km-bhG" firstAttribute="leading" secondItem="Sd8-CC-cxj" secondAttribute="trailing" id="93R-uL-6kt"/>
+                                            <constraint firstItem="Sd8-CC-cxj" firstAttribute="leading" secondItem="Vsp-yK-EDW" secondAttribute="leading" id="BT8-Bd-9db"/>
                                             <constraint firstItem="gp5-O2-2Qv" firstAttribute="width" secondItem="Vsp-yK-EDW" secondAttribute="width" multiplier="0.2" id="Mag-Xa-PZm"/>
                                             <constraint firstAttribute="bottom" secondItem="Wco-km-bhG" secondAttribute="bottom" id="c0C-ax-hW7"/>
                                             <constraint firstItem="gp5-O2-2Qv" firstAttribute="top" secondItem="Vsp-yK-EDW" secondAttribute="top" id="eCI-TN-3h9"/>
                                             <constraint firstItem="Wco-km-bhG" firstAttribute="width" secondItem="Vsp-yK-EDW" secondAttribute="width" multiplier="0.2" id="eWK-WM-5fD"/>
                                             <constraint firstItem="Wco-km-bhG" firstAttribute="top" secondItem="Vsp-yK-EDW" secondAttribute="top" id="fhV-u1-Snb"/>
                                             <constraint firstAttribute="bottom" secondItem="gp5-O2-2Qv" secondAttribute="bottom" id="rGz-Pp-4Lm"/>
+                                            <constraint firstItem="gp5-O2-2Qv" firstAttribute="leading" secondItem="Wco-km-bhG" secondAttribute="trailing" id="rJ1-UA-mdd"/>
                                             <constraint firstAttribute="bottom" secondItem="Sd8-CC-cxj" secondAttribute="bottom" id="xPv-og-0k3"/>
                                         </constraints>
                                     </stackView>
@@ -799,6 +808,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="NY2-Uf-Huy"/>
+                    <connections>
+                        <outlet property="addPostButton" destination="Wco-km-bhG" id="zCV-ld-aQf"/>
+                        <outlet property="menuButton" destination="gp5-O2-2Qv" id="Ydh-49-tLU"/>
+                        <outlet property="usernameButton" destination="Sd8-CC-cxj" id="gwM-nS-JK3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yIm-wu-476" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -807,7 +821,7 @@
         <!--search-->
         <scene sceneID="McR-Hg-rwj">
             <objects>
-                <viewController id="FgD-kR-DSL" userLabel="search" sceneMemberID="viewController">
+                <viewController restorationIdentifier="SearchViewController" storyboardIdentifier="SearchViewController" id="FgD-kR-DSL" userLabel="search" customClass="SearchViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w7u-Ff-kcb">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="735"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -823,7 +837,7 @@
         <!--Home-->
         <scene sceneID="ecO-aA-adQ">
             <objects>
-                <viewController id="fqp-B4-jFh" userLabel="Home" sceneMemberID="viewController">
+                <viewController restorationIdentifier="HomeViewController" storyboardIdentifier="HomeViewController" id="fqp-B4-jFh" userLabel="Home" customClass="HomeViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ucH-Bl-bKy">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="735"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -903,7 +917,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="TabBarCotroller" destination="NGz-G0-nie" id="Qwt-bV-9LO"/>
                         <outlet property="cameraView" destination="zDf-c3-TY9" id="88H-gC-PfN"/>
                         <outlet property="messageView" destination="HUS-Ya-FaZ" id="83W-PI-qoc"/>
                         <outlet property="scrollView" destination="Yob-KF-qV8" id="Hb9-RA-9ZM"/>
@@ -942,7 +955,7 @@
         <!--Reels-->
         <scene sceneID="s3z-z7-Ivm">
             <objects>
-                <viewController id="AzB-RS-Wfu" userLabel="Reels" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ReelsViewController" storyboardIdentifier="ReelsViewController" id="AzB-RS-Wfu" userLabel="Reels" customClass="ReelsViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hJ9-UR-37U">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="735"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -958,7 +971,7 @@
         <!--activity-->
         <scene sceneID="W5M-Ku-wHg">
             <objects>
-                <viewController id="fTb-HN-juX" userLabel="activity" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ActivityViewController" storyboardIdentifier="ActivityViewController" id="fTb-HN-juX" userLabel="activity" customClass="ActivityViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1hb-ya-Bw0">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="735"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -973,9 +986,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="down_arrow" width="20" height="20"/>
         <image name="facebook-24px" width="24" height="24"/>
         <image name="instatext" width="278.5" height="99"/>
+        <image name="menu-bar" width="36" height="36"/>
         <image name="person" width="150" height="150"/>
+        <image name="plus-outline" width="36" height="36"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

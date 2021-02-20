@@ -24,6 +24,13 @@
 		707E1C4225DA8B2500719A34 /* LoginUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E1C4125DA8B2500719A34 /* LoginUIController.swift */; };
 		707FB9EC25D56C2C00BC06A8 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707FB9EB25D56C2C00BC06A8 /* PasswordTextField.swift */; };
 		707FB9F325D5AC5B00BC06A8 /* InstaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707FB9F225D5AC5B00BC06A8 /* InstaTextField.swift */; };
+		70ED484225DFAA6E008B11F9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70ED484125DFAA6E008B11F9 /* ProfileViewController.swift */; };
+		70ED484525DFABE6008B11F9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70ED484425DFABE6008B11F9 /* HomeViewController.swift */; };
+		70ED484825DFAC90008B11F9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70ED484725DFAC90008B11F9 /* SearchViewController.swift */; };
+		70ED484B25DFACCB008B11F9 /* ReelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70ED484A25DFACCB008B11F9 /* ReelsViewController.swift */; };
+		70ED484E25DFAD0E008B11F9 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70ED484D25DFAD0E008B11F9 /* ActivityViewController.swift */; };
+		70ED485125DFC870008B11F9 /* TabBarPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70ED485025DFC870008B11F9 /* TabBarPages.swift */; };
+		70ED485425DFD154008B11F9 /* TabBarPagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70ED485325DFD154008B11F9 /* TabBarPagesVC.swift */; };
 		98B7763364C88FE2E5C21EC9 /* Pods_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269BE9007055CDBE79E7698E /* Pods_Instagram.framework */; };
 		F717362025D3BEF3008A3EAE /* UIView+Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F717361F25D3BEF3008A3EAE /* UIView+Padding.swift */; };
 		F717362325D3BF3E008A3EAE /* UITextField+Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F717362225D3BF3E008A3EAE /* UITextField+Padding.swift */; };
@@ -57,6 +64,13 @@
 		707E1C4125DA8B2500719A34 /* LoginUIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUIController.swift; sourceTree = "<group>"; };
 		707FB9EB25D56C2C00BC06A8 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		707FB9F225D5AC5B00BC06A8 /* InstaTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaTextField.swift; sourceTree = "<group>"; };
+		70ED484125DFAA6E008B11F9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		70ED484425DFABE6008B11F9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		70ED484725DFAC90008B11F9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		70ED484A25DFACCB008B11F9 /* ReelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsViewController.swift; sourceTree = "<group>"; };
+		70ED484D25DFAD0E008B11F9 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		70ED485025DFC870008B11F9 /* TabBarPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPages.swift; sourceTree = "<group>"; };
+		70ED485325DFD154008B11F9 /* TabBarPagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPagesVC.swift; sourceTree = "<group>"; };
 		F717361F25D3BEF3008A3EAE /* UIView+Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Padding.swift"; sourceTree = "<group>"; };
 		F717362225D3BF3E008A3EAE /* UITextField+Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Padding.swift"; sourceTree = "<group>"; };
 		F717362525D3C0DD008A3EAE /* LoginScreenInternal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenInternal.swift; sourceTree = "<group>"; };
@@ -163,6 +177,13 @@
 				7030781725D7E4A300494605 /* CameraViewController.swift */,
 				7030781D25D7F1EF00494605 /* RootViewController.swift */,
 				7030782425D83CE100494605 /* TabBarController.swift */,
+				70ED484125DFAA6E008B11F9 /* ProfileViewController.swift */,
+				70ED484425DFABE6008B11F9 /* HomeViewController.swift */,
+				70ED484725DFAC90008B11F9 /* SearchViewController.swift */,
+				70ED484A25DFACCB008B11F9 /* ReelsViewController.swift */,
+				70ED484D25DFAD0E008B11F9 /* ActivityViewController.swift */,
+				70ED485025DFC870008B11F9 /* TabBarPages.swift */,
+				70ED485325DFD154008B11F9 /* TabBarPagesVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -325,19 +346,26 @@
 			files = (
 				F78247D125D3CA1C00B2208E /* String+Validation.swift in Sources */,
 				7030781E25D7F1EF00494605 /* RootViewController.swift in Sources */,
+				70ED484225DFAA6E008B11F9 /* ProfileViewController.swift in Sources */,
 				7062017925CBC95700ADE9C2 /* AppDelegate.swift in Sources */,
+				70ED485125DFC870008B11F9 /* TabBarPages.swift in Sources */,
 				7030782525D83CE100494605 /* TabBarController.swift in Sources */,
+				70ED484525DFABE6008B11F9 /* HomeViewController.swift in Sources */,
 				F717362925D3C119008A3EAE /* LoginScreenExternal.swift in Sources */,
 				7064486B25D4080B000C241E /* LoginDarkScreen.swift in Sources */,
 				F717362625D3C0DD008A3EAE /* LoginScreenInternal.swift in Sources */,
 				F717362025D3BEF3008A3EAE /* UIView+Padding.swift in Sources */,
+				70ED485425DFD154008B11F9 /* TabBarPagesVC.swift in Sources */,
 				707FB9F325D5AC5B00BC06A8 /* InstaTextField.swift in Sources */,
 				7062019725CBFC1100ADE9C2 /* SignupViewController.swift in Sources */,
+				70ED484825DFAC90008B11F9 /* SearchViewController.swift in Sources */,
 				F717362325D3BF3E008A3EAE /* UITextField+Padding.swift in Sources */,
 				707E1C4225DA8B2500719A34 /* LoginUIController.swift in Sources */,
 				707FB9EC25D56C2C00BC06A8 /* PasswordTextField.swift in Sources */,
+				70ED484B25DFACCB008B11F9 /* ReelsViewController.swift in Sources */,
 				7064486225D3F124000C241E /* LoginLightScreen.swift in Sources */,
 				7030781525D7E48C00494605 /* MessageViewController.swift in Sources */,
+				70ED484E25DFAD0E008B11F9 /* ActivityViewController.swift in Sources */,
 				707C21B625D683270010A1C0 /* SignupEmailPhoneController.swift in Sources */,
 				7062019E25CC1F4E00ADE9C2 /* LoginViewController.swift in Sources */,
 				7063302125D4FEBE00BF658F /* UIButton+image.swift in Sources */,
